@@ -1,10 +1,235 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<meta charset="utf-8">
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		h2 {
+			font-family: monospace;
+			text-align: center;
+
+		}
+		p {
+			width: 95%;
+			margin-right: auto;
+			margin-left: auto;
+			
+		}
+		.borderPad{
+			padding: 10px;
+		}
+		.borderDiv{
+		/*padding: 0px 10px 0px 10px;*/
+			border: 3px solid black;
+			background-color: gray;
+		}
+		.row{
+			width: 100%;
+		}
+		.chicken{
+			width: 100px;
+background-color: pink;
+border: 2px solid black; 
+text-align: center;
+float: right; 
+margin-top: -2px
+		}
+		.beef{
+width: 100px;
+background-color: red;
+color: white;
+border: 2px solid black; 
+text-align: center;
+float: right; 
+margin-top: -2px
+		}
+		.sushi{
+width: 100px;
+background-color: #e5d198;
+border: 2px solid black; 
+text-align: center;
+float: right; 
+margin-top: -2px
+		}
+
+
+		@media (min-width: 992px) {
+  		
+ 		 .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{
+ 		 	float: left;
+ 		 }
+ 		 .col-md-1{
+ 		 	width: 8.33%;
+ 		 }
+ 		 .col-md-2{
+ 		 	width: 16.66%;
+ 		 }
+ 		 .col-md-3{
+ 		 	width: 25%;
+ 		 }
+ 		 .col-md-4{
+ 		 	width: 33%;
+ 		 }
+ 		 .col-md-5{
+ 		 	width: 41.61%;
+ 		 }
+ 		 .col-md-6{
+ 		 	width: 50%;
+ 		 }
+ 		 .col-md-7{
+ 		 	width: 58.33%;
+ 		 }
+ 		 .col-md-8{
+ 		 	width: 66.66%;
+ 		 }
+ 		 .col-md-9{
+ 		 	width: 74.99%;
+ 		 }
+ 		 .col-md-10{
+ 		 	width: 83.33%
+ 		 }
+ 		 .col-md-11{
+ 		 	width: 91.66%
+ 		 }
+ 		 .col-md-12{
+ 		 	width: 100%
+ 		 }
+ 		}
+
+ 		@media screen and  (min-width: 768px) and (max-width: 991px) {
+
+ 		 .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{
+ 		 	float: left;
+ 		 	/*border: 3px solid black;*/
+ 		 }
+ 		 .col-sm-1{
+ 		 	width: 8.33%;
+ 		 }
+ 		 .col-sm-2{
+ 		 	width: 16.66%;
+ 		 }
+ 		 .col-sm-3{
+ 		 	width: 25%;
+ 		 }
+ 		 .col-sm-4{
+ 		 	width: 33%;
+ 		 }
+ 		 .col-sm-5{
+ 		 	width: 41.61%;
+ 		 }
+ 		 .col-sm-6{
+ 		 	width: 50%;
+ 		 }
+ 		 .col-sm-7{
+ 		 	width: 58.33%;
+ 		 }
+ 		 .col-sm-8{
+ 		 	width: 66.66%;
+ 		 }
+ 		 .col-sm-9{
+ 		 	width: 74.99%;
+ 		 }
+ 		 .col-sm-10{
+ 		 	width: 83.33%
+ 		 }
+ 		 .col-sm-11{
+ 		 	width: 91.66%
+ 		 }
+ 		 .col-sm-12{
+ 		 	width: 100%
+ 		 }
+ 		}
+ 		 @media  (max-width: 767px){
+  		
+ 		 .col-xm-1, .col-xm-2, .col-xm-3, .col-xm-4, .col-xm-5, .col-xm-6, .col-xm-7, .col-xm-8, .col-xm-9, .col-xm-10, .col-xm-11, .col-xm-12{
+ 		 	float: left;
+ 		 	/*border: 1px solid black;*/
+ 		 	padding: 10px;
+ 		 }
+ 		 .col-xm-1{
+ 		 	width: 8.33%;
+ 		 }
+ 		 .col-xm-2{
+ 		 	width: 16.66%;
+ 		 }
+ 		 .col-xm-3{
+ 		 	width: 25%;
+ 		 }
+ 		 .col-xm-4{
+ 		 	width: 33%;
+ 		 }
+ 		 .col-xm-5{
+ 		 	width: 41.61%;
+ 		 }
+ 		 .col-xm-6{
+ 		 	width: 50%;
+ 		 }
+ 		 .col-xm-7{
+ 		 	width: 58.33%;
+ 		 }
+ 		 .col-xm-8{
+ 		 	width: 66.66%;
+ 		 }
+ 		 .col-xm-9{
+ 		 	width: 74.99%;
+ 		 }
+ 		 .col-xm-10{
+ 		 	width: 83.33%
+ 		 }
+ 		 .col-xm-11{
+ 		 	width: 91.66%
+ 		 }
+ 		 .col-xm-12{
+ 		 	width: 100%
+ 		 }
+ 		}
+ 		
+	</style>
+</head>
 <body>
 
-<h1>My First Heading</h1>
+<h2>Our Menu</h2>
+<div class="row">
+	<div class="col-md-4 col-sm-6 col-xm-12 borderPad">
+		<div class="borderDiv">
+		<p class="chicken"><strong>Chicken</strong></p>
+			<br>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+	</div>
+	<div class="col-md-4 col-sm-6 col-xm-12 borderPad">
+	<div class="borderDiv">
+	<p class="beef"><strong>Beef</strong></p>
+	<br>
+	
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	</div>
+	<div class="col-md-4 col-sm-12 col-xm-12 borderPad">
+	<div class="borderDiv">
+		<p class="sushi"><strong>Sushi</strong></p>
+	<br>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	</div>
 
-<p>My first paragraph.</p>
-
+</div>
 </body>
 </html>
